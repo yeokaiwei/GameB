@@ -8,8 +8,8 @@
 
 typedef struct GAMEBITMAP
 {
-	BITMAPINFO bitMapInfo; 
-	void* Memory;  
+	BITMAPINFO bitMapInfo;
+	void* Memory;
 } GAMEBITMAP;
 
 //#6 32 bit pixel. There are many types of pixels. BGRA is a 1972

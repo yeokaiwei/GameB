@@ -1,5 +1,18 @@
 //#2 
+// Action: Properties -> Code Analysis -> General -> Enable Microsoft Code Analysis -> Yes
+// Action: Properties -> Code Analysis -> General -> Enable Code Analysis on Build -> Yes
+// 
+// Action: Properties -> Code Analysis -> Microsoft -> "Microsoft Native Recommended Rules" to "Microsoft All Rules"
+// 
+// Note: To disable Spectre to avoid installing extra libraries.
+// Action: Properties -> C/C++ -> All Options -> Spectre Mitigation -> Disabled
+// 
+// Note: For per monitor DPI awareness. Proper full-screen
+// Action : Properties -> Manifest Tool -> Input Output -> DPI Awareness -> Per Monitor High DPI Aware
+// 
+// Note: To prevent C2446 errors.
 // Action: Change to main.c from main.cpp
+// 
 // Note:	Debug, Properties-> Advanced -> Whole Program Optimization -> No Whole Program Optimization 
 //			Release,Properties-> Advanced -> Whole Program Optimization -> Use Link Time Code Generation (All optimization)
 // 
@@ -40,10 +53,10 @@
 #pragma warning(pop)    //Then, pop out the warning level and reset to /Wall
 
 //LRESULT is a long pointer. CALLBACK is __stdcall, a calling convention. Another cc is __cdecl
-LRESULT CALLBACK MainWindowProc(HWND hWindow,        // handle to window
-                                UINT uMessage,        // message identifier
-                                WPARAM wParam,    // first message parameter
-                                LPARAM lParam);   // second message parameter
+LRESULT CALLBACK MainWindowProc(HWND hWindow,       // handle to window
+                                UINT uMessage,      // message identifier
+                                WPARAM wParam,      // first message parameter
+                                LPARAM lParam);     // second message parameter
 
 DWORD CreateMainGameWindow();
 
